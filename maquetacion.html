@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        
+        .container {
+            display: flex /*or inline-flex*/;
+            flex-direction: row; /*row*/
+            width: 100%;
+            flex-wrap:wrap;  
+            
+        }
+        
+
+
+        .container > div {
+            padding: 30px ; 
+            background-color: #fff;
+            border-radius:100%;
+            margin:20px;
+            cursor:pointer;  
+            animation-name: luna;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+
+
+
+
+         
+        
+        body{ 
+            animation-name: mover ,amanecer;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            overflow:hidden;
+        }
+
+
+
+
+        @keyframes amanecer{
+            0%{
+                background-color:#000033;
+            }
+            50%{
+                background-color:#fff;
+            }
+            100%{
+                background-color:#000033;
+            }
+        }
+
+
+
+        @keyframes luna{
+            0%{
+                background-color:#fff;
+            }
+            50%{
+                background-color:#888877;
+            }
+            100%{
+                background-color:#fff;
+            }
+        }
+
+
+        
+        @keyframes mover{
+            0%{
+                transform:translate(200px,200px);
+                rotate: 0deg;
+            }
+             
+            100%{
+                transform:translate(200px,200px);
+                rotate: 360deg;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div></div> 
+    </div>
+ 
+</body>
+</html>
