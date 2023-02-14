@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try</title>
+
+    <style>
+        body{
+            background:linear-gradient(25deg, green 20%, blue 75%);
+        }
+
+        .chasis{
+            background: linear-gradient(230deg, transparent 25%,#fff 25%) ;
+            width: 200px;
+            height:50px;
+            z-index:100;
+            position:absolute;
+            top:35px;
+            left:70px;
+            border-radius: 10px 10px 10px  10px;
+        }
+
+        .LinearGradient{
+           width:35px;
+           height:35px;
+           background: linear-gradient(55deg, #445533 55%,#ffeeff 55%);
+           border-radius:10%;
+           animation: mover-rueda 7s infinite  ;
+           border-radius: 100px;
+           margin:20px; 
+           display:inline-block;
+        }
+
+        .rueda-isquierda{
+           position:absolute;
+           top:55px;
+           left:75px;
+        }
+
+        .rueda-derecha{
+           position:absolute;
+           top:55px;
+           left:170px;
+        }
+
+        @keyframes mover-rueda{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes mover-left{
+            0%{
+                transform:translateX(0px);
+            }
+            50%{
+                transform:translateX(850px);
+            }
+            100%{
+                transform:translateX(0px);
+            }
+        }
+        .puerta{
+            background: linear-gradient(230deg,transparent 25%,#888);
+            width:40px;
+            height:44px;
+            z-index:100;
+            position:absolute;
+            right:35px;
+            top:5px; 
+            background-repeat:repeat-x;
+        }
+
+
+        .puerta-1{
+            background: linear-gradient(230deg,transparent 25%,#888);
+            width:40px;
+            height:44px;
+            z-index:100;
+            position:absolute;
+            right:75px;
+            top:5px; 
+            background-repeat:repeat-x;
+        }
+
+        
+        .car{
+            position : relative;
+            animation: mover-car-right 50s infinite  ;
+        }
+        @keyframes mover-car-right{
+            0%{
+                transform:translateX(0px);
+            }
+            50%{
+                transform:translateX(850px);
+            }
+            100%{
+                transform:translateX(0px);
+            }
+        }
+        .rines{
+            width:7px;
+            height:7px;
+            background-color:#fff;
+            border-radius:100px;
+            position:absolute;
+            top:25%;
+            left:25%;
+            border: dashed  5px #888;
+        }
+        .road{
+            width:100%;
+            height:120px;
+            background:linear-gradient(25deg, #3333ef 20%, #afafff 75%);
+            position:absolute; 
+            z-index: -1;
+        }
+        .inner-road{
+            width:100%;
+            height:45px;
+            background-color:#000;
+            position:absolute;
+            bottom:0px;
+            z-index: -1;
+        }
+
+        .road-divide{
+            width:100%; 
+            border-bottom: dashed 2px yellow;
+            position:absolute;
+            bottom:50%;
+            z-index: -1;
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <div>
+     
+    <div class=car>
+        <div class=chasis> 
+            <div class=puerta-1></div>
+            <div class=puerta></div>
+        </div>
+
+        <div class="LinearGradient rueda-isquierda">  
+            <div class="rines"></div>
+        </div>
+        
+        
+        <div class="LinearGradient rueda-derecha">  
+            <div class="rines"></div>
+        </div>
+    </div>
+    <div class=road>
+        <div class="inner-road">
+            <div class="road-divide"></div>    
+        </div>
+    </div>
+    </div>
+</body>
+</html>
