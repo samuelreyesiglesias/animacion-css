@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation direction</title>
+    <style>
+        .direccion{
+            width:40px;
+            height:40px;
+            border-radius:20px;
+            background: linear-gradient(120deg, green,blue);
+            box-shadow: inset 0px 0px 1px 0px #000;
+            animation-name: mover-derecha;
+            animation-duration: 3s; 
+            animation-direction: backwards;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        .direccion:hover{
+            animation-play-state:running
+        }
+
+        /*
+        Show me all the states of a animation-play-state
+        animation-play-state: paused;
+        animation-play-state: running;
+        animation-play-state: initial;
+        animation-play-state: inherit;
+        animation-play-state: unset;
+        */
+        
+
+
+        @keyframes mover-derecha{
+            0%{
+                transform: translateX(0px)
+            }
+            100%{
+                transform: translateX(500px)
+            }
+        }
+
+        .move-it{
+            width:40px;
+            height:40px;
+            border-radius:20px;
+            background: linear-gradient(120deg, green,blue);
+            box-shadow: inset 0px 0px 1px 0px #000;
+            animation-name: mover-derecha;
+            animation-duration: 3s; 
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        /*
+        change a sibling when hover .move-it
+        */
+        
+        .move-it:hover ~ .direccion{
+            animation-play-state:running
+        }
+        /*change a property of the parent element fof example the background of the color when hovering the move-it element div*/
+        .move-it:hover{
+            background: linear-gradient(120deg, red,blue);
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    
+<div class="move-it"></div>
+<div class="direccion"></div>
+
+<br>what are all the animation-direction options in css3?
+<br>animation-direction: alternate-reverse;
+<br>animation-direction: linear;
+<br>animation-direcction: alternate;
+<br>animation-direction: forwards;
+<br>animation-direction: backwards;
+<br>animation-direction: normal;
+<br>animation-direction: reverse;
+<br>animation-direction: alternate;
+<br>animation-direction: inherit;
+<br>animation-direction: initial;
+<br>animation-direction: unset;
+ 
+
+</body>
+</html>
+
+
