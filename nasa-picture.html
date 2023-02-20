@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NASA Picture of the Day</h1>
+    <!--//fetch nasa picture of the day using fecth js-->
+    <script>
+        fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            document.body.innerHTML += `<img src="${data.url}" alt="${data.title}">`;
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

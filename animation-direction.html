@@ -33,7 +33,31 @@
         */
         
 
+        /*all the values for animation-fill-mode
+        animation-fill-mode: none;
+        animation-fill-mode: forwards;
+        animation-fill-mode: backwards;
+        animation-fill-mode: both;
+        animation-fill-mode: initial;
+        animation-fill-mode: inherit;
+        animation-fill-mode: unset;
 
+        */
+        
+        body{
+            animation: animationJ 2s 1 linear 
+        }
+
+        @keyframes animationJ{
+            0%{
+                transform:translateX(0px) rotate(0deg)
+            }
+            100%{
+                transform:translateX(500px) rotate(360deg)
+            }
+        }
+
+        
         @keyframes mover-derecha{
             0%{
                 transform: translateX(0px)
